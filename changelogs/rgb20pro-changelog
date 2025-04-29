@@ -1,0 +1,98 @@
+Initial Stable Release (11/27/2024)
+- Only authentic Sandisk and Samsung cards are supported and recommended.
+  - In my initial testing poor or unknown quality sd cards somestimes fail to reboot.  TO MINIMIZE ON POTENTIAL FRUSTRATION, ONLY USE AN AUTHENTIC SAMSUNG OR SANDISK SD CARD
+- Follow the instructions from the wiki to properly loading this image: https://github.com/christianhaitian/arkos/wiki#instructions-for-loading
+- Initial boot and preparation can take about 5 minutes to complete due to the themes being copied.  Be patient!
+- Be sure during initial boot, Only have the OS SD card in slot 1 (TF1/INT.) during the initial boot!.  Do not put an SD card in slot 2 (TF2/Ext.) during the initial boot!  Failure to follow this may result in strange behavior during the intial boot preparation process.
+- Once the initial boot has completed and you're at the Emulationstation menu, you can insert your second sd card into slot 2 (TF2/Ext.).
+- To make use of your second sd card for your games, go to options/Advancec/Switch to SD2 for ROMS.  For more information, see: https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---rgb30#q-how-do-i-make-use-of-the-second-sd-slot-for-roms-and-games
+- Hotkey information: https://github.com/christianhaitian/arkos/wiki/Frequently-Asked-Questions---RGB30#q-what-are-the-global-event-keys-and-emulator-event-keys-in-ArkOS
+
+Known Issues
+- If your unit came with ROCKKNIX installed or you've run ROCKNIX on your unit, you must open your unit and unplug the battery for 10 seconds or it will not be able to safely shutdown.  The unit will just reboot.
+  As a temporary workaround, if you shutdown the unit in ROCKNIX using the the proper shutdown process through the start menu, you will be able to shutdown safely in ArkOS,
+  however, the solution is temporary because if you do a system reboot, the issue will return.
+  
+v2.0 (12/24/2024)
+- Reverted Kodi 21.1 to Kodi 20.5 to fix streaming addon playback issues
+- Reverted exfat kernel module from last update
+- Fixed fail booting when second sd card is not found or not in the expected format
+- Updated ScummVM Standalone to 2.9.0
+- Updated SDL to 2.0.30.10
+- Updated Change Ports SDL tool to support SDL 2.0.30.10 and 2.0.28.2
+- Updated FileBrowser to version 2.31.2
+- Updated enable_vibration script
+- Updated coco.sh script to accomodate providing an alternate default control scheme for CoCo3 emulation using XRoar
+- Added j2me emulator using libretro freej2me and freej2me-plus cores
+- Added j2me system to NES-Box theme(Thanks to Jetup13)
+
+v2.0 (01/31/2025)
+- Updated Retroarch and Retroarch32 to 1.20.0 (ed1810d)
+- Updated Hypseus-singe to 2.11.4
+- Updated kernel to add native rumble support (Thanks to trngaje. Thanks to wakeboxer for the mention of this being available.)
+- Updated kernel to fix incorrect battery reading when switching between bsp and mainline os like ROCKNIX (Thanks to spycat88 for the fix)
+- Updated Kodi to 21.2 with streaming addon playback issues fixed (Thanks to allanguild for the guidance on the necessary fix)
+- Updated pico8.sh script to fix Splore deleting downloaded carts when played offline (Thanks to elmimmo for reporting the issue)
+- Updated Emulationstation to add support for fontawesome font and add ability for additional translatable text (Thanks to wakeboxer)
+- Updated Emulationstation to add support for setting a custom verbal battery warning threshold (Thanks to mardem1976 for the suggestion)
+- Updated Emulationstation Korean translation (Thanks to wakeboxer for the PR)
+- Updated batt_life_verbal_warning.py to accomodate custom verbal battery warning threshold
+- Fixed bad freej2me-lr.jar and freej2me-plus-lr.jar files from 12/24/2024 update
+- Fixed text for Power LED Status during sleep setting in Emulationstation Advanced menu (Thanks to wakeboxer for reporting this and the PR to fix this)
+- Added Cave Story as a system using doukutsu-rs libretro core (Thanks to Tonhum for the suggestion and testing)
+- Added Cave Story system to NES-Box theme (Thanks to Jetup13)
+
+v2.0 (02/01/2025)
+- Fixed controller issue for Kodi, Mednafen and possibly other programs and emulators from last update
+
+v2.0 (02/01/2025-2)
+- Reverted battery reading change from 01312025.
+  - If your battery is only charging to 50 percent, either let the unit completely drain to power off or open your unit and unplug 
+    your battery for 10 seconds to resolve the issue.
+- Add onscripter-onsyuri core for Onscripter system (Thanks to lcdyk0517 for the suggestion and testing.  Thanks to iyzsong for the libretro core and guidance.)
+
+v2.0 (02/01/2025)-3
+- Fixed Portmaster segfaulting
+- Added BUTTON_RIGHTSTICK as KEY_SERVICE for Hypsesus-Singe
+
+v2.0 (02/02/2025)
+- Updated Retroarch and Retroarch32 to respect custom in-game save and savestate locations settings (05f75b8)
+- Added .VERSION file to /home/ark/.config folder location for PortMaster use
+
+v2.0 (02/08/2025)
+- Updated Retroarch and Retroarch32 to last 1.20.0 stable release due to override issues
+- Updated Emulationstation to resolve missing font issue for languages such as Korean (Thanks to wakeboxer for the fix)
+- Updated wifi tool to truncate long SSIDs during password input (Thanks to dani7959 for reporting the issue)
+- Updated USB Drive Mount to prevent incorrect mounting filesystem errors (Thanks to XNLFutureTechnologies for the fix)
+- Updated msgbox to add support for parsing a second argument as a dialog title (Thanks to XNLFutureTechnologies for the pull request)
+- Added BBC Micro emulation using the b2 libretro core (Thanks to SuperBadger77 for the recommendation)
+- Updated NES-Box theme to include BBC Micro (Thanks to Jetup13)
+
+v2.0 (02/09/2025)
+- Updated Emulationstation to fix missing popup keyboard fonts
+- Updated Emulationstation to add Date and Time display for video and slideshow screensavers (Thanks to bulzipke for the PR and Batocera)
+- Updated Emulationstation to add Korean(Hangui) input, unicode and other fixes for the popup keyboard (Thanks to bulzipke for the PR and Batocera)
+- Updated Retroarch and Retroarch32 to the correct last 1.20.0 stable release this time
+- Updated Retroarch and Retroarch32 common overlays
+- Updated BBC Micro emulation to no longer need a swapfile (Thanks to zoltanvb for updating the libretro core to resolve this)
+
+v2.0 (03/29/2025)
+- Updated finish.sh and pause.sh to fix Favorites and Last Played not keeping updates between power on and power off events
+- Updated XRoar to 1.8.2
+- Updated GZDoom to 4.14.1
+- Updated Network Manager to 1.52.0
+- Updated Kodi.sh to mod urllib3 module to add python3.7 support
+- Updated Emulationstation to fix a popup keyboard cursor movement issue (Thanks to bulzipke for the PR)
+- Updated Emulationstation to fix korean keyboard (Thanks to ljhmd0825 for the PR)
+- Updated Emulationstation to fix screensaver update (Thanks to bulzipke for the PR)
+- Updated Emulationstation Russia translation (Thanks to SerjGeek)
+- Updated Update script to simplify future updates
+- Added Emulationstation Ukrainian Translation (Thanks to SerjGeek)
+- Added Emulationstation Swedish Translation (Thanks to yeager)
+- Added Dragon32 emulation (Thanks to alektronic)
+- Added Dragon64 emulation (Thanks to alektronic)
+- Added navy1978's modified retrorun and retrorun32 as additional emulators for Atomiswave, Dreamcast, Noami and Saturn (Thanks to navy1978 for the work and accommodations)
+- Added Flycast Standalone as additional emulator for Atomiswave, Dreamcast and Naomi (Thanks to KitFox618 for the inquiry)
+
+v2.0 (03/30/2025)
+- Fixed analog stick for retrorun and retrorun32 (Thanks to KitFox618 for reporting the issue)
